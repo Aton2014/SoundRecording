@@ -7,16 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCB54AE71D92994E0060D68D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB54AE61D92994E0060D68D /* libc++.tbd */; };
+		DCB54AE91D9299B10060D68D /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB54AE81D9299B10060D68D /* iflyMSC.framework */; };
+		DCB54AF71D9389570060D68D /* HCiflyMSC.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54AF21D9389570060D68D /* HCiflyMSC.m */; };
+		DCB54AF81D9389570060D68D /* IATConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54AF41D9389570060D68D /* IATConfig.m */; };
+		DCB54AF91D9389570060D68D /* ISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54AF61D9389570060D68D /* ISRDataHelper.m */; };
+		DCB54B141D938E0A0060D68D /* PcmPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54AFF1D938E0A0060D68D /* PcmPlayer.m */; };
+		DCB54B151D938E0A0060D68D /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54B021D938E0A0060D68D /* PopupView.m */; };
+		DCB54B161D938E0A0060D68D /* SBJson4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54B061D938E0A0060D68D /* SBJson4Parser.m */; };
+		DCB54B171D938E0A0060D68D /* SBJson4StreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54B081D938E0A0060D68D /* SBJson4StreamParser.m */; };
+		DCB54B181D938E0A0060D68D /* SBJson4StreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54B0A1D938E0A0060D68D /* SBJson4StreamParserState.m */; };
+		DCB54B191D938E0A0060D68D /* SBJson4StreamTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54B0C1D938E0A0060D68D /* SBJson4StreamTokeniser.m */; };
+		DCB54B1A1D938E0A0060D68D /* SBJson4StreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54B0E1D938E0A0060D68D /* SBJson4StreamWriter.m */; };
+		DCB54B1B1D938E0A0060D68D /* SBJson4StreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54B101D938E0A0060D68D /* SBJson4StreamWriterState.m */; };
+		DCB54B1C1D938E0A0060D68D /* SBJson4Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54B121D938E0A0060D68D /* SBJson4Writer.m */; };
+		DCB54B201D93B1570060D68D /* HCiflyTTS.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54B1F1D93B1570060D68D /* HCiflyTTS.m */; };
+		DCB54B251D93B1E00060D68D /* TTSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB54B221D93B1E00060D68D /* TTSConfig.m */; };
 		DCBD02241D929537008647FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD02231D929537008647FA /* main.m */; };
 		DCBD02271D929537008647FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD02261D929537008647FA /* AppDelegate.m */; };
 		DCBD022A1D929537008647FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD02291D929537008647FA /* ViewController.m */; };
 		DCBD022D1D929537008647FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCBD022B1D929537008647FA /* Main.storyboard */; };
 		DCBD022F1D929537008647FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCBD022E1D929537008647FA /* Assets.xcassets */; };
 		DCBD02321D929537008647FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCBD02301D929537008647FA /* LaunchScreen.storyboard */; };
+		DCBD023C1D9296D4008647FA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD023B1D9296D4008647FA /* libz.tbd */; };
+		DCBD023E1D9296E0008647FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD023D1D9296E0008647FA /* CoreGraphics.framework */; };
+		DCBD02401D9296E6008647FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD023F1D9296E6008647FA /* Foundation.framework */; };
+		DCBD02421D9296ED008647FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD02411D9296ED008647FA /* UIKit.framework */; };
+		DCBD02441D9296F5008647FA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD02431D9296F5008647FA /* QuartzCore.framework */; };
+		DCBD02461D929704008647FA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD02451D929704008647FA /* AudioToolbox.framework */; };
+		DCBD02481D92970E008647FA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD02471D92970E008647FA /* SystemConfiguration.framework */; };
+		DCBD024A1D929717008647FA /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD02491D929717008647FA /* AddressBook.framework */; };
+		DCBD024C1D929721008647FA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD024B1D929721008647FA /* AVFoundation.framework */; };
+		DCBD024E1D92972C008647FA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD024D1D92972C008647FA /* CoreTelephony.framework */; };
+		DCBD02501D929737008647FA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD024F1D929737008647FA /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DCBD021F1D929537008647FA /* SoundRecording.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundRecording.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB54AE61D92994E0060D68D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		DCB54AE81D9299B10060D68D /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
+		DCB54AF11D9389570060D68D /* HCiflyMSC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCiflyMSC.h; path = SoundRecording/ThirdLib/HCiflyMSC.h; sourceTree = "<group>"; };
+		DCB54AF21D9389570060D68D /* HCiflyMSC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCiflyMSC.m; path = SoundRecording/ThirdLib/HCiflyMSC.m; sourceTree = "<group>"; };
+		DCB54AF31D9389570060D68D /* IATConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IATConfig.h; path = SoundRecording/ThirdLib/IATConfig.h; sourceTree = "<group>"; };
+		DCB54AF41D9389570060D68D /* IATConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IATConfig.m; path = SoundRecording/ThirdLib/IATConfig.m; sourceTree = "<group>"; };
+		DCB54AF51D9389570060D68D /* ISRDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISRDataHelper.h; path = SoundRecording/ThirdLib/ISRDataHelper.h; sourceTree = "<group>"; };
+		DCB54AF61D9389570060D68D /* ISRDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ISRDataHelper.m; path = SoundRecording/ThirdLib/ISRDataHelper.m; sourceTree = "<group>"; };
+		DCB54AFE1D938E0A0060D68D /* PcmPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcmPlayer.h; sourceTree = "<group>"; };
+		DCB54AFF1D938E0A0060D68D /* PcmPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PcmPlayer.m; sourceTree = "<group>"; };
+		DCB54B001D938E0A0060D68D /* PcmPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PcmPlayerDelegate.h; sourceTree = "<group>"; };
+		DCB54B011D938E0A0060D68D /* PopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupView.h; sourceTree = "<group>"; };
+		DCB54B021D938E0A0060D68D /* PopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupView.m; sourceTree = "<group>"; };
+		DCB54B041D938E0A0060D68D /* SBJson4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4.h; sourceTree = "<group>"; };
+		DCB54B051D938E0A0060D68D /* SBJson4Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4Parser.h; sourceTree = "<group>"; };
+		DCB54B061D938E0A0060D68D /* SBJson4Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4Parser.m; sourceTree = "<group>"; };
+		DCB54B071D938E0A0060D68D /* SBJson4StreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamParser.h; sourceTree = "<group>"; };
+		DCB54B081D938E0A0060D68D /* SBJson4StreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamParser.m; sourceTree = "<group>"; };
+		DCB54B091D938E0A0060D68D /* SBJson4StreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamParserState.h; sourceTree = "<group>"; };
+		DCB54B0A1D938E0A0060D68D /* SBJson4StreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamParserState.m; sourceTree = "<group>"; };
+		DCB54B0B1D938E0A0060D68D /* SBJson4StreamTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamTokeniser.h; sourceTree = "<group>"; };
+		DCB54B0C1D938E0A0060D68D /* SBJson4StreamTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamTokeniser.m; sourceTree = "<group>"; };
+		DCB54B0D1D938E0A0060D68D /* SBJson4StreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamWriter.h; sourceTree = "<group>"; };
+		DCB54B0E1D938E0A0060D68D /* SBJson4StreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamWriter.m; sourceTree = "<group>"; };
+		DCB54B0F1D938E0A0060D68D /* SBJson4StreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4StreamWriterState.h; sourceTree = "<group>"; };
+		DCB54B101D938E0A0060D68D /* SBJson4StreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4StreamWriterState.m; sourceTree = "<group>"; };
+		DCB54B111D938E0A0060D68D /* SBJson4Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson4Writer.h; sourceTree = "<group>"; };
+		DCB54B121D938E0A0060D68D /* SBJson4Writer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJson4Writer.m; sourceTree = "<group>"; };
+		DCB54B1E1D93B1570060D68D /* HCiflyTTS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCiflyTTS.h; sourceTree = "<group>"; };
+		DCB54B1F1D93B1570060D68D /* HCiflyTTS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCiflyTTS.m; sourceTree = "<group>"; };
+		DCB54B211D93B1E00060D68D /* TTSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSConfig.h; sourceTree = "<group>"; };
+		DCB54B221D93B1E00060D68D /* TTSConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSConfig.m; sourceTree = "<group>"; };
+		DCBD021F1D929537008647FA /* 英语听读.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "英语听读.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCBD02231D929537008647FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DCBD02251D929537008647FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DCBD02261D929537008647FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +85,17 @@
 		DCBD022E1D929537008647FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCBD02311D929537008647FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCBD02331D929537008647FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCBD023B1D9296D4008647FA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		DCBD023D1D9296E0008647FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DCBD023F1D9296E6008647FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DCBD02411D9296ED008647FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DCBD02431D9296F5008647FA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DCBD02451D929704008647FA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DCBD02471D92970E008647FA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DCBD02491D929717008647FA /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		DCBD024B1D929721008647FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DCBD024D1D92972C008647FA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DCBD024F1D929737008647FA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,16 +103,102 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB54AE91D9299B10060D68D /* iflyMSC.framework in Frameworks */,
+				DCB54AE71D92994E0060D68D /* libc++.tbd in Frameworks */,
+				DCBD02501D929737008647FA /* CoreLocation.framework in Frameworks */,
+				DCBD024E1D92972C008647FA /* CoreTelephony.framework in Frameworks */,
+				DCBD024C1D929721008647FA /* AVFoundation.framework in Frameworks */,
+				DCBD024A1D929717008647FA /* AddressBook.framework in Frameworks */,
+				DCBD02481D92970E008647FA /* SystemConfiguration.framework in Frameworks */,
+				DCBD02461D929704008647FA /* AudioToolbox.framework in Frameworks */,
+				DCBD02441D9296F5008647FA /* QuartzCore.framework in Frameworks */,
+				DCBD02421D9296ED008647FA /* UIKit.framework in Frameworks */,
+				DCBD02401D9296E6008647FA /* Foundation.framework in Frameworks */,
+				DCBD023E1D9296E0008647FA /* CoreGraphics.framework in Frameworks */,
+				DCBD023C1D9296D4008647FA /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DCB54AF01D9388BD0060D68D /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+				DCB54B1D1D93B1430060D68D /* HCiflyTTS */,
+				DCB54AFA1D938E0A0060D68D /* tools */,
+				DCB54AF11D9389570060D68D /* HCiflyMSC.h */,
+				DCB54AF21D9389570060D68D /* HCiflyMSC.m */,
+				DCB54AF31D9389570060D68D /* IATConfig.h */,
+				DCB54AF41D9389570060D68D /* IATConfig.m */,
+				DCB54AF51D9389570060D68D /* ISRDataHelper.h */,
+				DCB54AF61D9389570060D68D /* ISRDataHelper.m */,
+			);
+			name = ThirdLib;
+			sourceTree = "<group>";
+		};
+		DCB54AFA1D938E0A0060D68D /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				DCB54AFD1D938E0A0060D68D /* pcmPlayerCode */,
+				DCB54B011D938E0A0060D68D /* PopupView.h */,
+				DCB54B021D938E0A0060D68D /* PopupView.m */,
+				DCB54B031D938E0A0060D68D /* SBJson */,
+			);
+			name = tools;
+			path = SoundRecording/ThirdLib/tools;
+			sourceTree = "<group>";
+		};
+		DCB54AFD1D938E0A0060D68D /* pcmPlayerCode */ = {
+			isa = PBXGroup;
+			children = (
+				DCB54AFE1D938E0A0060D68D /* PcmPlayer.h */,
+				DCB54AFF1D938E0A0060D68D /* PcmPlayer.m */,
+				DCB54B001D938E0A0060D68D /* PcmPlayerDelegate.h */,
+			);
+			path = pcmPlayerCode;
+			sourceTree = "<group>";
+		};
+		DCB54B031D938E0A0060D68D /* SBJson */ = {
+			isa = PBXGroup;
+			children = (
+				DCB54B041D938E0A0060D68D /* SBJson4.h */,
+				DCB54B051D938E0A0060D68D /* SBJson4Parser.h */,
+				DCB54B061D938E0A0060D68D /* SBJson4Parser.m */,
+				DCB54B071D938E0A0060D68D /* SBJson4StreamParser.h */,
+				DCB54B081D938E0A0060D68D /* SBJson4StreamParser.m */,
+				DCB54B091D938E0A0060D68D /* SBJson4StreamParserState.h */,
+				DCB54B0A1D938E0A0060D68D /* SBJson4StreamParserState.m */,
+				DCB54B0B1D938E0A0060D68D /* SBJson4StreamTokeniser.h */,
+				DCB54B0C1D938E0A0060D68D /* SBJson4StreamTokeniser.m */,
+				DCB54B0D1D938E0A0060D68D /* SBJson4StreamWriter.h */,
+				DCB54B0E1D938E0A0060D68D /* SBJson4StreamWriter.m */,
+				DCB54B0F1D938E0A0060D68D /* SBJson4StreamWriterState.h */,
+				DCB54B101D938E0A0060D68D /* SBJson4StreamWriterState.m */,
+				DCB54B111D938E0A0060D68D /* SBJson4Writer.h */,
+				DCB54B121D938E0A0060D68D /* SBJson4Writer.m */,
+			);
+			path = SBJson;
+			sourceTree = "<group>";
+		};
+		DCB54B1D1D93B1430060D68D /* HCiflyTTS */ = {
+			isa = PBXGroup;
+			children = (
+				DCB54B211D93B1E00060D68D /* TTSConfig.h */,
+				DCB54B221D93B1E00060D68D /* TTSConfig.m */,
+				DCB54B1E1D93B1570060D68D /* HCiflyTTS.h */,
+				DCB54B1F1D93B1570060D68D /* HCiflyTTS.m */,
+			);
+			name = HCiflyTTS;
+			path = SoundRecording/ThirdLib/HCiflyTTS;
+			sourceTree = "<group>";
+		};
 		DCBD02161D929537008647FA = {
 			isa = PBXGroup;
 			children = (
+				DCB54AF01D9388BD0060D68D /* ThirdLib */,
 				DCBD02211D929537008647FA /* SoundRecording */,
+				DCBD02391D929626008647FA /* Framwork */,
 				DCBD02201D929537008647FA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,7 +206,7 @@
 		DCBD02201D929537008647FA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DCBD021F1D929537008647FA /* SoundRecording.app */,
+				DCBD021F1D929537008647FA /* 英语听读.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +235,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DCBD02391D929626008647FA /* Framwork */ = {
+			isa = PBXGroup;
+			children = (
+				DCB54AE81D9299B10060D68D /* iflyMSC.framework */,
+				DCBD024F1D929737008647FA /* CoreLocation.framework */,
+				DCBD024D1D92972C008647FA /* CoreTelephony.framework */,
+				DCBD024B1D929721008647FA /* AVFoundation.framework */,
+				DCBD02491D929717008647FA /* AddressBook.framework */,
+				DCBD02471D92970E008647FA /* SystemConfiguration.framework */,
+				DCBD02451D929704008647FA /* AudioToolbox.framework */,
+				DCBD02431D9296F5008647FA /* QuartzCore.framework */,
+				DCBD02411D9296ED008647FA /* UIKit.framework */,
+				DCBD023F1D9296E6008647FA /* Foundation.framework */,
+				DCBD023D1D9296E0008647FA /* CoreGraphics.framework */,
+				DCBD023B1D9296D4008647FA /* libz.tbd */,
+				DCB54AE61D92994E0060D68D /* libc++.tbd */,
+			);
+			name = Framwork;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -96,7 +272,7 @@
 			);
 			name = SoundRecording;
 			productName = SoundRecording;
-			productReference = DCBD021F1D929537008647FA /* SoundRecording.app */;
+			productReference = DCBD021F1D929537008647FA /* 英语听读.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,6 +286,7 @@
 				TargetAttributes = {
 					DCBD021E1D929537008647FA = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = KEVU9J8R96;
 					};
 				};
 			};
@@ -149,8 +326,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCB54B201D93B1570060D68D /* HCiflyTTS.m in Sources */,
+				DCB54B171D938E0A0060D68D /* SBJson4StreamParser.m in Sources */,
+				DCB54B1B1D938E0A0060D68D /* SBJson4StreamWriterState.m in Sources */,
+				DCB54AF91D9389570060D68D /* ISRDataHelper.m in Sources */,
+				DCB54B181D938E0A0060D68D /* SBJson4StreamParserState.m in Sources */,
+				DCB54AF71D9389570060D68D /* HCiflyMSC.m in Sources */,
+				DCB54B141D938E0A0060D68D /* PcmPlayer.m in Sources */,
+				DCB54AF81D9389570060D68D /* IATConfig.m in Sources */,
 				DCBD022A1D929537008647FA /* ViewController.m in Sources */,
+				DCB54B1A1D938E0A0060D68D /* SBJson4StreamWriter.m in Sources */,
+				DCB54B251D93B1E00060D68D /* TTSConfig.m in Sources */,
+				DCB54B1C1D938E0A0060D68D /* SBJson4Writer.m in Sources */,
+				DCB54B151D938E0A0060D68D /* PopupView.m in Sources */,
 				DCBD02271D929537008647FA /* AppDelegate.m in Sources */,
+				DCB54B161D938E0A0060D68D /* SBJson4Parser.m in Sources */,
+				DCB54B191D938E0A0060D68D /* SBJson4StreamTokeniser.m in Sources */,
 				DCBD02241D929537008647FA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,10 +454,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOS_voice_1135_57e24f6a/lib",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SoundRecording/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.12301youzi.SoundRecording;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.12301youzi.travel;
+				PRODUCT_NAME = "英语听读";
 			};
 			name = Debug;
 		};
@@ -274,10 +473,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iOS_voice_1135_57e24f6a/lib",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SoundRecording/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.12301youzi.SoundRecording;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.12301youzi.travel;
+				PRODUCT_NAME = "英语听读";
 			};
 			name = Release;
 		};
@@ -300,6 +507,7 @@
 				DCBD02381D929537008647FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lge-2R-WKj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfz-TJ-C53">
+                                <rect key="frame" x="100" y="57" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9aa-54-mil"/>
+                                    <constraint firstAttribute="width" constant="100" id="lNF-Ho-4h8"/>
+                                </constraints>
+                                <state key="normal" title="录音"/>
+                                <connections>
+                                    <action selector="btnRecordingTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="EJk-3m-8Xx"/>
+                                    <action selector="btnRecording_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ayk-AH-8Bx"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YYu-l7-FLc">
+                                <rect key="frame" x="20" y="104" width="555" height="476"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gZ-HF-yr6">
+                                <rect key="frame" x="400" y="57" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ir1-4X-ztv"/>
+                                    <constraint firstAttribute="width" constant="100" id="ZuZ-GB-frj"/>
+                                </constraints>
+                                <state key="normal" title="翻译"/>
+                                <connections>
+                                    <action selector="btnTranslateTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tw4-Lu-O7q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6gZ-HF-yr6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="18X-Q1-JaA"/>
+                            <constraint firstItem="vfz-TJ-C53" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="1ev-nr-qIQ"/>
+                            <constraint firstItem="YYu-l7-FLc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2mG-To-fJn"/>
+                            <constraint firstItem="YYu-l7-FLc" firstAttribute="top" secondItem="6gZ-HF-yr6" secondAttribute="bottom" constant="17" id="79N-wm-fAG"/>
+                            <constraint firstItem="vfz-TJ-C53" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1:2" id="AtA-Aj-u4n"/>
+                            <constraint firstItem="YYu-l7-FLc" firstAttribute="top" secondItem="6gZ-HF-yr6" secondAttribute="bottom" constant="17" id="BSP-yv-faP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YYu-l7-FLc" secondAttribute="bottom" constant="20" id="MPH-Sr-6ho"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YYu-l7-FLc" secondAttribute="trailing" constant="5" id="oeO-fE-BQ8"/>
+                            <constraint firstItem="6gZ-HF-yr6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="3:2" id="sXZ-7A-bNe"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3om-yL-xfu"/>
+                    <connections>
+                        <outlet property="txtContent" destination="YYu-l7-FLc" id="SaJ-1t-EKu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1689" y="341"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xB3-qc-vm9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lge-2R-WKj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BDZ-lo-nX5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bKO-hh-7h7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ug9-jT-QMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985" y="341"/>
         </scene>
     </scenes>
 </document>

@@ -3,7 +3,7 @@
 //  SoundRecording
 //
 //  Created by aton on 16/9/21.
-//  Copyright © 2016年 aton. All rights reserved.
+//  Copyright © 2016年-09 aton. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -19,6 +19,12 @@
 #import "ISRDataHelper.h"
 #import "IATConfig.h"
 
+@protocol HCiflyMSCDelegate <NSObject>
+
+- (void)getContent:(NSString*)content;
+
+@end
+
 @interface HCiflyMSC : NSObject<IFlySpeechRecognizerDelegate,IFlyRecognizerViewDelegate,UIActionSheetDelegate>
 
 @property (nonatomic, strong) NSString *pcmFilePath;//音频文件路径
@@ -27,6 +33,8 @@
 @property (nonatomic, strong) IFlyDataUploader *uploader;//数据上传对象
 
 
+@property (nonatomic, weak) id <HCiflyMSCDelegate> hciflyMSCDelegate;
+
 @property (nonatomic, strong) NSString * result;
 @property (nonatomic, assign) BOOL isCanceled;
 
@@ -34,5 +42,6 @@
 + (instancetype)sharedInstance;
 - (void)initUtility;
 - (void)startRecognizer;
+- (void)stopRecognizer;
 
 @end

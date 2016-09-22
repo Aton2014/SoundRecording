@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HCiflyMSC.h"
+#import "HCiflyTTS.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<HCiflyMSCDelegate>
 
 
 @end

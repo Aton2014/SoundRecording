@@ -44,6 +44,8 @@
     [IFlySpeechUtility createUtility:initString];
     
     self.uploader = [[IFlyDataUploader alloc] init];
+    
+//    [self initRecognizer];
 }
 
 /**
@@ -143,7 +145,7 @@
         return;
     }
     
-    if(_iFlySpeechRecognizer)
+    if(!_iFlySpeechRecognizer)
     {
         [self initRecognizer];
     }
@@ -154,29 +156,30 @@
         return;
     }
     
-    NSFileManager *fm = [NSFileManager defaultManager];
     
-    if(!_pcmFilePath || [_pcmFilePath length] == 0) {
-        return;
-    }
+    //设置音频来源为麦克风
+    [_iFlySpeechRecognizer setParameter:IFLY_AUDIO_SOURCE_MIC forKey:@"audio_source"];
     
-    if (![fm fileExistsAtPath:_pcmFilePath]) {
-//        [_popUpView showText:@"文件不存在"];
-        NSLog(@"文件不存在");
-        return;
-    }
-    
+    //设置听写结果格式为json
     [_iFlySpeechRecognizer setParameter:@"json" forKey:[IFlySpeechConstant RESULT_TYPE]];
-    [_iFlySpeechRecognizer setParameter:IFLY_AUDIO_SOURCE_STREAM forKey:@"audio_source"];    //设置音频数据模式为音频流
+    
+    //保存录音文件，保存在sdk工作路径中，如未设置工作路径，则默认保存在library/cache下
+    [_iFlySpeechRecognizer setParameter:@"asr.pcm" forKey:[IFlySpeechConstant ASR_AUDIO_PATH]];
+    
+    [_iFlySpeechRecognizer setDelegate:self];
+    
     BOOL ret  = [_iFlySpeechRecognizer startListening];
     
-    if (ret) {
-        //self.isCanceled = NO;
-        //启动发送数据线程
-        [NSThread detachNewThreadSelector:@selector(sendAudioThread) toTarget:self withObject:nil];
-    }
+//    if (ret) {
+//        //self.isCanceled = NO;
+//        //启动发送数据线程
+//        [NSThread detachNewThreadSelector:@selector(sendAudioThread) toTarget:self withObject:nil];
+//    }
 }
 
+- (void)stopRecognizer {
+    [_iFlySpeechRecognizer stopListening];
+}
 /**
  写入音频流线程
  ****/
@@ -310,14 +313,16 @@
     }
     _result =[NSString stringWithFormat:@"%@", resultString];
     NSString * resultFromJson =  [ISRDataHelper stringFromJson:resultString];
-    _textView.text = [NSString stringWithFormat:@"%@%@", _textView.text,resultFromJson];
+    //[NSString stringWithFormat:@"%@", resultFromJson];
+    if (self.hciflyMSCDelegate) {
+        [self.hciflyMSCDelegate getContent:(resultFromJson)];
+    }
     
     if (isLast){
         NSLog(@"听写结果(json)：%@测试",  self.result);
     }
     NSLog(@"_result=%@",_result);
     NSLog(@"resultFromJson=%@",resultFromJson);
-    NSLog(@"isLast=%d,_textView.text=%@",isLast,_textView.text);
 }
 
 
@@ -335,7 +340,10 @@
     for (NSString *key in dic) {
         [result appendFormat:@"%@",key];
     }
-    _textView.text = [NSString stringWithFormat:@"%@%@",_textView.text,result];
+//    _textView.text = [NSString stringWithFormat:@"%@%@",_textView.text,result];
+    if (self.hciflyMSCDelegate) {
+        [self.hciflyMSCDelegate getContent:(result)];
+    }
 }
 
 
